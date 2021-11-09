@@ -1,0 +1,37 @@
+:root{
+    --space-header-background: black;
+    --blue-section-background: blue;
+    --magenta-section-background: magenta;
+}
+body{
+    margin: 0;
+    display: block;
+    overflow: overlay;
+}
+
+.main-wrapper{
+    display: none;
+}
+
+div {
+    display: flex;
+}
+
+.space-header{
+    height: 200vh;
+    background-color: var(--space-header-background);
+}
+
+.blue-section{
+    height: 200vh;
+    background-color: var(--blue-section-background);
+}
+
+.magenta-section{
+    height: 200vh;
+    background-color: var(--magenta-section-background);
+}
+
+.splitted-section{
+    
+}
