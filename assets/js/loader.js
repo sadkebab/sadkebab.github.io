@@ -1,4 +1,4 @@
-AWAIT_NO_IMG_MS=2000;
+AWAIT_NO_IMG_MS=500;
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     var imgs = document.images,

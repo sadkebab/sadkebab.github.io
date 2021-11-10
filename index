@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="TODO">
+        <meta name="keywords" content="TODO">
+        <meta name="author" content="Alberto Harka">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SadKebab</title>
+        
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/loader.css"/>
+        <link rel="stylesheet" href="assets/css/scroll.css"/>
+        <script type="text/javascript" src="assets/js/loader.js"></script>
+    </head>
+    <body>
+        <div id="loader-wrapper" class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+        <div id="main-wrapper" class="main-wrapper">
+            <div class="space-header">
+                <div class="menu">
+                    <svg></svg>
+                    <ul>
+                        <li>Home</li>
+                        <li>Progetti</li>
+                        <li>Lavora Con Noi</li>
+                        <li>Contatti</li>
+                    </ul>
+                </div>
+                <div class="space-header-content">
+                    <svg id="iotinga-logo" class="iotinga-logo">Parallax Effect</svg>
+                    <p>Iotinga è la società di consulenza strategica in ambito tecnologico e sviluppo software che opera principalmente nel settore degli oggetti connessi a internet.</p>
+                    <p><b>Iotinga è la tua soluzione 4.0</b></p>
+                </div>
+            </div>
+            <div class="blue-section">
+                <div class="blue-section-header">
+                    <h1></h1>
+                    <hr>
+                    <p></p>
+                </div>
+                <div class="blue-section-row-1">
+                    <div class="img-column"><img></img></div>
+                    <div class="text-column"><p></p></div>
+                </div>
+                <div class="blue-section-row-2">
+                    <div class="text-column"><p></p></div>
+                    <div class="img-column"><img></img></div>
+                </div>
+                <div class="blue-section-footer">
+                    <a class="cta">Lavora con noi</a>
+                </div>
+            </div>
+            <div class="magenta-section">
+                <div class="magenta-section-header">
+                    <h1></h1>
+                    <hr>
+                    <p></p>
+                </div>
+                <div class="magenta-section-row-1">
+                    <div class="text-column"><p></p></div>
+                    <div class="img-column"><img></img></div>
+                </div>
+                <div class="magenta-section-row-2">
+                    <div class="img-column"><img></img></div>
+                    <div class="text-column"><p></p></div>
+                </div>
+                <div class="magenta-section-footer">
+                    <p></p>
+                    <a class="cta">Progetti</a>
+                </div>
+            </div>
+            <div class="splitted-section">
+                <div class="buisness-card"></div>
+                <div class="work-with-us"></div>
+                <div class="nokia-container"></div>
+            </div>
+            <div class="footer">
+                <p>P.IVA</p>
+                <p>Privacy Policy</p>
+                <p>Credits</p>
+            </div>
+        </div>
+    </body>
+</html>

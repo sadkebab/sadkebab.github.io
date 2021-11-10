@@ -1,37 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+
 :root{
     --space-header-background: black;
     --blue-section-background: blue;
     --magenta-section-background: magenta;
+    --iotinga-white: #F0EFEE;
+    --shape-divier-blue-height: 8em;
+    --shape-divier-magenta-height: 8em;
 }
 body{
+    font-family: work-sans, sans-serif;
     margin: 0;
     display: block;
     overflow: overlay;
 }
 
+h1, hr, p{
+    margin: 0;
+}
+.st0{display:none;}
+.st1{display:inline;}
+.st2{fill:var(--iotinga-white);}
+
 .main-wrapper{
     display: none;
 }
 
-div {
+.logo-container{
+    width: 7em;
+}
+
+.logo-container svg{
+    fill: var(--iotinga-white);
+}
+
+.iotinga-center-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10em;
+    margin-left: -19em;
+    width: 38em;
+    height: 20em;
+    display: flex;
+    vertical-align: middle;
+}
+.iotinga-center-logo svg{
+    fill: var(--iotinga-white);
+}
+
+.menu {
     display: flex;
 }
 
-.space-header{
-    height: 200vh;
+.menu ul{
+    right: 0;
+    display: flex;
+    list-style-type:none;
+    color: var(--iotinga-white);
+}
+
+.space-section{
     background-color: var(--space-header-background);
 }
 
+.space-section > .hero{
+    height: 100vh;
+}
+
+.space-section > .main-description{
+    
+}
+
+.main-description div{
+    width: 100%;
+}
+
 .blue-section{
-    height: 200vh;
     background-color: var(--blue-section-background);
 }
 
 .magenta-section{
-    height: 200vh;
     background-color: var(--magenta-section-background);
 }
 
-.splitted-section{
-    
+
+.custom-shape-divider-bottom-blue {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-blue svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: var(--shape-divier-blue-height);
+}
+
+.custom-shape-divider-bottom-blue .shape-fill {
+    fill: var(--blue-section-background);
+}
+
+.custom-shape-divider-bottom-magenta {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-magenta svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: var(--shape-divier-magenta-height);
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-magenta .shape-fill {
+    fill: var(--magenta-section-background);
 }
