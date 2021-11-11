@@ -7,7 +7,13 @@ function mobileMenuClick(x) {
 
 document.onscroll = function(){
     offset=(window.pageYOffset/100.0);
+
+    wd=$(window).width();
     backgroundParallax='50% calc(50% - '+(offset*3)+'em)';
+    if(wd<768){
+        backgroundParallax='50% calc(0vh + '+(offset*2)+'em)';
+    }
+    
     document.getElementById("space-section").style.backgroundPosition=backgroundParallax;
 
     //$("#satellite").css('left',(SATELLITE_BASE_LEFT+(offset*5))+'px');
