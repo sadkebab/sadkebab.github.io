@@ -7,10 +7,8 @@ function mobileMenuClick(x) {
 
 document.onscroll = function(){
     offset=(window.pageYOffset/100.0);
-    //    backgroundParallax='50% calc(50% - '+(offset*3)+'em)';
-    //    document.getElementById("space-section").style.backgroundPosition=backgroundParallax;
-    
-    
+    backgroundParallax='50% calc(50% - '+(offset*3)+'em)';
+    document.getElementById("space-section").style.backgroundPosition=backgroundParallax;
 
     //$("#satellite").css('left',(SATELLITE_BASE_LEFT+(offset*5))+'px');
     //$("#commodore").css('top',(COOMODORE_BASE_TOP+(offset*10))+'px');

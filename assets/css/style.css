@@ -37,12 +37,7 @@ body{
     display: block;
     
 }
-html, body { max-width: 100%; overflow-x: hidden; 
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            position: relative;
-        }
+html, body { max-width: 100%; overflow-x: hidden; position: relative;}
 
 h1, hr, p{
     margin: 0;
@@ -59,8 +54,6 @@ h1, hr, p{
 .header {
     display: flex;
     padding: 2em 6em;
-    visibility: hidden; 
-    /* TODO remove visibility: hidden; */
 }
 
 .menu-container{
@@ -143,22 +136,18 @@ h1, hr, p{
     fill: var(--iotinga-white);
 }
 
-.space-header-content > div{
-    position: absolute; 
-    height: calc(100vh - 376px); 
-    width: 100vw;
-}
-
-.iotinga-center-logo{
+.iotinga-center-logo > div svg{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -10em;
-    margin-left: -19em;
-    width: 38em;
+    margin-top: -16em;
+    margin-left: -15vw;
+    width: 30vw;
     height: 20em;
     display: flex;
     vertical-align: middle;
+}
+.iotinga-center-logo > div svg{
     fill: var(--iotinga-white);
 }
 /*----------------------- Images section HEADER -----------------------*/
@@ -499,7 +488,9 @@ img.space-bottom{
     
 .work-with-us{
     width: 33%;
-    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 .nokia-container{
     width: 33%;

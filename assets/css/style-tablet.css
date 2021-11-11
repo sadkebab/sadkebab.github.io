@@ -5,9 +5,6 @@
     .menu-container a{
         font-size: 1.2em;
     }
-    .space-header-content > div{
-        height: calc(100vh - 260px);
-    } 
 }
 
 
@@ -18,12 +15,6 @@
 }
 
 @media only screen and (max-width: 1164px) {
-    .space-section{
-        background-attachment: scroll;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-    }
     .satellite-img{
         top: 14.5em;
         left: 10vw;
@@ -135,6 +126,3 @@
         font-size: 1.4em;
     }
 }
-
-
-
