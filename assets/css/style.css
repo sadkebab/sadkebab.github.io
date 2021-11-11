@@ -251,7 +251,7 @@ img.space-bottom{
     width: 100%;
 }
 
-.main-description .text-elements{
+.text-elements{
     color: var(--iotinga-white);
     text-align: center;
     font-size: 2em;
