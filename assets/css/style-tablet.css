@@ -5,6 +5,9 @@
     .menu-container a{
         font-size: 1.2em;
     }
+    .space-header-content > div{
+        height: calc(100vh - 260px);
+    } 
 }
 
 

@@ -37,7 +37,12 @@ body{
     display: block;
     
 }
-html, body { max-width: 100%; overflow-x: hidden; }
+html, body { max-width: 100%; overflow-x: hidden; 
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+        }
 
 h1, hr, p{
     margin: 0;
@@ -54,6 +59,8 @@ h1, hr, p{
 .header {
     display: flex;
     padding: 2em 6em;
+    visibility: hidden; 
+    /* TODO remove visibility: hidden; */
 }
 
 .menu-container{
@@ -134,6 +141,12 @@ h1, hr, p{
 
 .logo-container svg{
     fill: var(--iotinga-white);
+}
+
+.space-header-content > div{
+    position: absolute; 
+    height: calc(100vh - 376px); 
+    width: 100vw;
 }
 
 .iotinga-center-logo{

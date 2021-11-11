@@ -6,11 +6,10 @@ function mobileMenuClick(x) {
 
 
 document.onscroll = function(){
-    if(!navigator.userAgentData.mobile){
-        offset=(window.pageYOffset/100.0);
+    offset=(window.pageYOffset/100.0);
     //    backgroundParallax='50% calc(50% - '+(offset*3)+'em)';
     //    document.getElementById("space-section").style.backgroundPosition=backgroundParallax;
-    }
+    
     
 
     //$("#satellite").css('left',(SATELLITE_BASE_LEFT+(offset*5))+'px');
