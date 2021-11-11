@@ -22,9 +22,53 @@
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+.blue-section-row .img-column[mobile-disable], .magenta-section-row .img-column[mobile-disable]{
+    display: inline-flex;
+}
+.blue-section-row .img-column[mobile-enable], .magenta-section-row .img-column[mobile-enable]{
+    display: none;
+}
+.splitted-section[mobile]{
+    display: none;
+}
 
+img[enable768]{
+    display: none;
+}
+
+img[disable768]{
+    display: block;
+}
 
 @media only screen and (max-width: 768px) {
+    .space-section{
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .iotinga-center-logo > div svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -16em;
+        margin-left: -35vw;
+        width: 70vw;
+        height: 20em;
+        display: flex;
+        vertical-align: middle;
+    }
+    .satellite-responsive{
+        top: 50vh;
+        left: 50%;
+        position: absolute;
+        width: 16em;
+        margin-left: -8em;
+        z-index: 0;
+        animation: float-2 ease-in-out 2.3s infinite alternate;
+    }
+
     .header{
         padding: 1.25em 2em;
 
@@ -44,16 +88,158 @@
         margin-bottom: auto;
         padding: 0 10px;
     }
+
+    img[enable768]{
+        display: block;
+    }
+    img[disable768]{
+        display: none;
+    }
+
+    .pc{
+        top: calc(3em + calc(100vw * 0.153));
+        left: calc(-2em - calc(100vw * 0.03));
+        width: calc(8em + calc(100vw * 0.2));
+    }
+    .cloud-2{
+        top: calc(4em + calc(100vw * 0.153));
+        left: calc(0em - calc(100vw * 0.03));
+        width: calc(14em + calc(100vw * 0.2));
+    }
+
+    .cloud-3{
+        top: calc(9em - calc(100vw * 0.153));
+        right: calc(-8em - calc(100vw * 0.03));
+        width: calc(13em + calc(100vw * 0.2));
+    }
+    .text-elements{
+        top: -4em;
+    }
+
+    /* Head divider */
+    .pointer{
+        top: calc(4em - calc(100vw * 0.02));
+        left: -3em;
+        width: calc(5em + calc(100vw * 0.25));
+    }
+    .stamp{
+        width: 8em;
+        right: 4em;
+    }
+    .cloud-4{
+        width: 20em;
+        right: -7em;
+    }
+
+    /* texts */
+    .blue-section-header p{
+        font-size: 1.2em;
+    }
+    .blue-section-row .text-column, .magenta-section-row .text-column  {
+        font-size: 1em;
+        width: 100%;
+    }
+    .blue-section-row .img-column, .magenta-section-row .img-column{
+        width: 100%;
+    }
+
+    .blue-section-row .img-column[mobile-disable], .magenta-section-row .img-column[mobile-disable]{
+        display: none;
+    }
+    .blue-section-row .img-column[mobile-enable], .magenta-section-row .img-column[mobile-enable]{
+        display: block;
+    }
+
+    .blue-section-row .img-column img, .magenta-section-row .img-column img{
+        width: 300px;
+    }
+
+    /* blue footer/magenta top*/
+    .blue-section-footer{
+        height: 15em;
+    }
+
+    .laptop{
+        width: 9em;
+        top: 4em;
+    }
+
+    .cabinato{
+        width: 11em;
+        top: 3em;
+        right: -2em;
+    }
+    .cloud-blue{
+        width: 22em;
+        top:1.5em;
+    }
+
+    /*magenta content*/
+    .vhs{
+        margin-bottom: 2em;
+    }
+    .napoleon{
+        margin-top: 0;
+    }
+
+    .magenta-section-header .spacer{
+        font-size: 1.2em;
+    }
+    .magenta-section-header .smaller{
+        font-size: 1.1em;
+    }
+
+    .magenta-section-footer{
+        font-size: 1.2em;
+    }
+
+    /*footer cards*/
+    .splitted-section[desktop]{
+        display: none;
+    }
+    .splitted-section[mobile]{
+        height: 60em;
+        display: block;
+        background: -webkit-linear-gradient(5deg, var(--iotinga-blue) 49.75%, var(--iotinga-green) 50%);
+        background: -o-linear-gradient(5deg, var(--iotinga-blue) 49.75%, var(--iotinga-green) 50%);
+        background: -moz-linear-gradient(5deg, var(--iotinga-blue) 49.75%, var(--iotinga-green) 50%);
+        background: linear-gradient(5deg, var(--iotinga-blue) 49.75%, var(--iotinga-green) 50%);
+    }
+    .buisness-card{
+        width: 100%;
+        height: 20em;
+        display: block;
+    }
+    .nokia-container{
+        width: 100%;
+        height: 20em;
+        display: block;
+    }
+    .nokia-container img{
+        height: auto;
+        width: 100%;
+    }
+    .work-with-us{
+        width: 100%;
+        height: 20em;
+        display: block;
+    }
+    .buisness-card > div {
+        padding-top: 0;
+        margin-right: 0;
+    }
+    .work-with-us > div {
+        padding-top: 11em;
+        margin-left: 0;
+    }
+    .footer p{
+        font-size: 0.7em;
+    }
 }
 
 @media only screen and (max-width: 376px){
-    .iotinga-center-logo{
-        margin-top: -5em;
-        margin-left: -9.5em;
-        width: 19em;
-        height: 10em;
-    }
-    .satellite-img{
+    
+    /* .satellite-img{
         top: 10.5em;
         left: 10vw;
         width: 8em;
@@ -81,4 +267,5 @@
         right: -4em;
         width: 14em;
     }
+     */
 }
