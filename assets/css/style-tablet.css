@@ -130,12 +130,12 @@
 
 
 @media only screen and (max-width: 376px){
-    /* .iotinga-center-logo{
+    .iotinga-center-logo{
         margin-top: -5em;
         margin-left: -9.5em;
         width: 19em;
         height: 10em;
-    } */
+    }
     .satellite-img{
         top: 10.5em;
         left: 10vw;

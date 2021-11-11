@@ -147,7 +147,10 @@ h1, hr, p{
     display: flex;
     vertical-align: middle;
 }
-.iotinga-center-logo svg{
+/* .iotinga-center-logo svg{
+    fill: var(--iotinga-white);
+} */
+.iotinga-center-logo{
     fill: var(--iotinga-white);
 }
 /*----------------------- Images section HEADER -----------------------*/
