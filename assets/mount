@@ -1,5 +1,6 @@
 > css/style.min.css
 cat css/loader.css >> css/style.min.css
+cat css/animations.css >> css/style.min.css
 cat css/style.css >> css/style.min.css
 cat css/style-tablet.css >> css/style.min.css
 cat css/style-mobile.css >> css/style.min.css
