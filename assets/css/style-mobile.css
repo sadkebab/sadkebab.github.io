@@ -1,0 +1,46 @@
+.mobile-menu {
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--iotinga-white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+  
+  
+@media only screen and (max-width: 768px) {
+    .header{
+        padding: 1.25em 2em;
+
+    }
+    .logo-container{
+        width: 5em;
+    }
+    .menu-container{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+        cursor: pointer;    
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 0 10px;
+    }
+}

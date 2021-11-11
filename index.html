@@ -9,22 +9,30 @@
 
         <title>SadKebab</title>
         
+        <link rel="stylesheet" href="assets/css/animations.css"/>
         <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/style-tablet.css"/>
+        <link rel="stylesheet" href="assets/css/style-mobile.css"/>
         <link rel="stylesheet" href="assets/css/loader.css"/>
         <link rel="stylesheet" href="assets/css/scroll.css"/>
         <script type="text/javascript" src="assets/js/loader.js"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+        <!-- <link rel="stylesheet" href="assets/css/style.min.css"/>
+        <script type="text/javascript" src="assets/js/scripts.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script> -->
     </head>
     <body>
         <div id="loader-wrapper" class="loader-wrapper">
             <span class="loader"><span class="loader-inner"></span></span>
         </div>
         <div id="main-wrapper" class="main-wrapper">
-            <section class="space-section">
+            <section id="space-section" class="space-section">
                 <div class="hero">
-                    <div class="menu">
-                        <div class="logo-container">
+                    <div class="header">
+                        <div class="logo-container"><a href="/">
                             <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 183.88 196.67" style="enable-background:new 0 0 183.88 196.67;" xml:space="preserve">
+                                    viewBox="0 0 183.88 196.67" style="enable-background:new 0 0 183.88 196.67;" xml:space="preserve" nopulse>
                                 <g class="st0">
                                     <g class="st1">
                                         <path class="st2" d="M642.92-247.46v18.08h4.97v5.34h-16.64v-5.34h5.01v-18.08h-5.01v-5.34h16.64v5.34H642.92z"/>
@@ -55,14 +63,20 @@
                                         c11.59,35.29,49.6,54.5,84.89,42.91C148.21,150.64,167.43,112.64,155.84,77.35 M139.36,124.08c-2.28,19.42-19.87,33.32-39.29,31.04
                                         c-19.42-2.28-33.32-19.87-31.04-39.29c2.28-19.42,19.87-33.32,39.29-31.04C127.74,87.07,141.64,104.66,139.36,124.08"/>
                                 </g>
-                            </svg>
-                        </div>    
-                        <ul>
-                            <li>Home</li>
-                            <li>Progetti</li>
-                            <li>Lavora Con Noi</li>
-                            <li>Contatti</li>
-                        </ul>
+                            </svg></a>
+                        </div>
+                        <div class="menu-container">
+                            <a selected><b>Home</b></a>
+                            <a href="/progetti">Progetti</a>
+                            <!-- <a href="mailto:info@iotinga.it" special>Lavora Con Noi</a> -->
+                            <a href="mailto:info@iotinga.it" special>Lavora Con Noi</a>
+                            <a href="/contatti">Contatti</a>
+                        </div>
+                        <div class="mobile-menu" onclick="mobileMenuClick(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
                     </div>
                     <div class="space-header-content">
                         <div id="iotinga-center-logo" class="iotinga-center-logo">
@@ -100,89 +114,147 @@
                                         C127.74,31.2,141.64,48.79,139.36,68.22"/>
                                 </g>
                             </svg>
-
                         </div>
+                        <img id="satellite" class="satellite-img" src="assets/img/head/sat.png">
+                        <img class="head-cloud-img" src="assets/img/head/cloud.png">
+                        <img id="commodore" class="commodore" src="assets/img/head/commodore.png">
+                        <img id="starman" class="starman" src="assets/img/head/starman.png">
+                        <img class="hand" src="assets/img/head/hand.png">
+                        <img id="rocket" class="rocket" src="assets/img/head/rocket.png">
                     </div>
                 </div>
                 <div class="main-description">
-                    <div>
-                        <p>Iotinga è la società di consulenza strategica in ambito tecnologico e sviluppo software che opera principalmente nel settore degli oggetti connessi a internet.</p>
-                        <p><b>Iotinga è la tua soluzione 4.0</b></p>
+                    <img id="pc" class="pc" src="assets/img/head/pc.png">
+                    <img id="cloud-2" class="cloud-2" src="assets/img/head/cloud-2.png">
+                    <img id="cloud-3" class="cloud-3" src="assets/img/head/cloud-3.png">
+                    <div class="text-elements">
+                        <p>Una realtà unica in grado di sviluppare<br> progetti complessi dall’hardware al software,<br>che offre soluzioni complete.<br><br><b style="font-size: 1.7em;">Iotinga è la tua soluzione 4.0</b></p>
                     </div>
-                    <div class="custom-shape-divider-bottom-blue">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-                        </svg>
+                    <div class="head-divider">
+                        <img id="pointer" class="pointer" src="assets/img/head/pointer.png">
+                        <img id="stamp" class="stamp" src="assets/img/head/stamp.png"> 
+                        <img id="cloud-4" class="cloud-4" src="assets/img/head/cloud.png">
                     </div>
+                    
                 </div>    
             </section>
             <div class="blue-section">
-                <div class="blue-section-header">
-                    <h1></h1>
-                    <!-- <hr> -->
-                    <p></p>
-                </div>
-                <div class="blue-section-row-1">
-                    <div class="img-column">
-                        <!-- <img src=""> -->
+                <div class="section-content">
+                    <div class="blue-section-header">
+                        <h1>CHI SIAMO</h1>
+                        <hr> 
+                        <p>Se stai cercando qualcuno che si occupi dei prodotti o delle necessità tecnologiche della tua azienda senza alcun compromesso, siamo la squadra che fa per te.</p>
                     </div>
-                    <div class="text-column">
-                        <p></p>
+                    <div class="blue-section-row" first>
+                        <div class="img-column mac">
+                            <img src="assets/img/who/mac.png">
+                        </div>
+                        <div class="text-column">
+                            <p>Siamo un team di esperti pronti a supportarti in ogni fase del tuo progetto, <br>qualsiasi sia la 
+                                sua complessità. Possiamo soddisfare ogni tua esigenza e aspettativa: manteniamo il focus 
+                                sull’essere un’azienda che offre soluzioni complete e competitive, distinguendoci come 
+                                unica realtà in Italia capace di gestire l’intero progetto senza alterare l’efficienza dei tuoi 
+                                attuali processi aziendali</p>
+                        </div>
                     </div>
-                </div>
-                <div class="blue-section-row-2">
-                    <div class="text-column">
-                        <p></p>
-                    </div>
-                    <div class="img-column">
-                        <!-- <img src=""> -->
+                    <div class="blue-section-row" second>
+                        <div class="text-column">
+                            <p>Crediamo fermamente nel mantra <b>“Do-it-better”</b> e il nostro metodo lo dimostra: 
+                                affrontiamo le sfide con un approccio integrato, volto al miglioramento continuo. Facciamo 
+                                tesoro dei tuoi feedback e investiamo costantemente nello sviluppo di solide competenze 
+                                settoriali per fornirti la Soluzione che stavi cercando</p>
+                        </div>
+                        <div class="img-column vhs">
+                            <img src="assets/img/who/vhs.png">
+                        </div>
                     </div>
                 </div>
                 <div class="blue-section-footer">
-                    <a class="cta">Lavora con noi</a>
-                    <div class="custom-shape-divider-bottom-magenta">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-                        </svg>
-                    </div>
+                        <img id="laptop" class="laptop" src="assets/img/who/laptop.png">
+                        <img id="cloud-blue" class="cloud-blue" src="assets/img/head/cloud.png">
+                        <img id="cabinato" class="cabinato" src="assets/img/who/cabinato.png"> 
                 </div>
+                
             </div>
             <div class="magenta-section">
-                <div class="magenta-section-header">
-                    <h1></h1>
-                    <hr>
-                    <p></p>
-                </div>
-                <div class="magenta-section-row-1">
-                    <div class="text-column">
-                        <p></p>
+                <div class="section-content">
+                    <div class="magenta-section-header">
+                        <h1>COSA FACCIAMO</h1>
+                        <p class="spacer">Aggiungiamo valore e vantaggio competitivo ai prodotti della tua azienda.<br>E lo facciamo 
+                            meglio e in meno tempo degli altri</p>
+                        <p class="smaller">Affianchiamo la tua organizzazione per facilitare<br>l’integrazione e l’avvio del progetto 
+                                secondo le necessità<br>ed i ritmi del tuo mercato</p>
                     </div>
-                    <div class="img-column">
-                        <!-- <img src=""> -->
+                    <div class="magenta-section-row">
+                        <div class="text-column">
+                            <p>Analizziamo il contesto e definiamo insieme una strategia che ci permetta di aggredire i 
+                                problemi e portare l’innovazione sul mercato in 6 mesi.</p>
+                        </div>
+                        <div class="img-column olivetti">
+                            <img src="assets/img/how/olivetti.png">
+                        </div>
                     </div>
-                </div>
-                <div class="magenta-section-row-2">
-                    <div class="img-column">
-                        <!-- <img src=""> -->
-                    </div>
-                    <div class="text-column">
-                        <p></p>
+                    <div class="magenta-section-row" style="margin-top: -10em;">
+                        <div class="img-column napoleon">
+                            <img src="assets/img/how/napoleone.png">
+                        </div>
+                        <div class="text-column">
+                            <p>Le nostre strategie sono iterative, fondate sul principio del miglioramento continuo, e 
+                                basate sui tre passi: costruisci, misura, migliora.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="magenta-section-footer">
-                    <p></p>
-                    <a class="cta">Progetti</a>
+                    <p>Trasferiamo il know-how gradualmente,<br> arricchiamo i processi esistenti con nuove 
+                        tecniche e strumenti,<br> migliorando efficacia ed efficienza</p>
                 </div>
             </div>
             <div class="splitted-section">
-                <div class="buisness-card"></div>
-                <div class="work-with-us"></div>
-                <div class="nokia-container"></div>
+                <div class="buisness-card">
+                    <div>
+                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 227.94 309.74" style="enable-background:new 0 0 227.94 309.74;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M29.62,258.23v18.08h4.97v5.34H17.95v-5.34h5.01v-18.08h-5.01v-5.34h16.64v5.34H29.62z"/>
+                            </g>
+                            <g>
+                                <path d="M37.8,267.27c0-8.55,6.66-14.88,15.74-14.88c9.04,0,15.74,6.29,15.74,14.88c0,8.59-6.7,14.88-15.74,14.88
+                                    C44.45,282.14,37.8,275.81,37.8,267.27z M62.53,267.27c0-5.47-3.86-9.21-9-9.21c-5.14,0-9,3.74-9,9.21c0,5.46,3.86,9.2,9,9.2
+                                    C58.67,276.47,62.53,272.73,62.53,267.27z"/>
+                            </g>
+                            <g>
+                                <path d="M94.35,260.94c-2.47-1.44-5.05-2.34-7.93-2.75v23.46h-6.66v-23.46c-2.83,0.41-5.46,1.32-7.97,2.75l-2.26-4.97
+                                    c3.99-2.38,8.71-3.58,13.52-3.58c4.85,0,9.62,1.19,13.56,3.58L94.35,260.94z"/>
+                                <path d="M109.47,258.23v18.08h4.97v5.34H97.8v-5.34h5.01v-18.08H97.8v-5.34h16.64v5.34H109.47z"/>
+                                <path d="M145.59,264.8v16.85h-6.66v-16.64c0-4.73-2.38-6.94-6.12-6.94c-3.86,0-6.7,2.34-6.7,7.4v16.19h-6.66v-28.76h6.45v3.49
+                                    c1.97-2.67,5.01-3.99,8.79-3.99C141.52,252.39,145.59,256.79,145.59,264.8z"/>
+                                <path d="M171.61,266.82h6.08v14.83h-5.01v-1.73c-2.05,1.52-4.68,2.22-7.72,2.22c-7.85,0-14.59-5.18-14.59-14.63
+                                    c0-8.92,6.66-15.12,15.82-15.12c5.05,0,9.25,1.73,12.04,4.97l-4.27,3.94c-2.1-2.22-4.52-3.25-7.44-3.25
+                                    c-5.59,0-9.41,3.74-9.41,9.41c0,6.08,4.07,9.12,8.63,9.12c2.18,0,4.23-0.62,5.88-1.97V266.82z"/>
+                                <path d="M210,265.91v15.74h-6.66v-6.9h-13.15v6.9h-6.58v-15.74c0-8.75,5.3-13.52,13.19-13.52S210,257.16,210,265.91z
+                                    M203.34,269.4v-4.11c0-4.89-2.63-7.23-6.58-7.23c-3.99,0-6.57,2.34-6.57,7.23v4.11H203.34z"/>
+                            </g>
+                        </g>
+                        <g>
+                            <path d="M198.56,37.04c3.7,11.26-2.43,23.38-13.69,27.07c-11.26,3.7-23.38-2.43-27.07-13.69c-3.7-11.26,2.43-23.38,13.69-27.07
+                                C182.75,19.66,194.87,25.79,198.56,37.04"/>
+                            <path d="M210.13,85.62c-2.52-7.68-5.88-14.85-9.93-21.45c-3.35,3.61-7.63,6.45-12.65,8.1c-15.76,5.18-32.74-3.4-37.91-19.17
+                                c-3.33-10.13-0.97-20.76,5.32-28.44c-22.11-9.81-47.79-11.77-72.58-3.63C29.28,38.48,0.37,95.68,17.81,148.79
+                                c17.44,53.11,74.64,82.02,127.75,64.58C198.66,195.92,227.58,138.73,210.13,85.62 M185.33,155.95
+                                c-3.43,29.23-29.9,50.14-59.13,46.72c-29.23-3.43-50.14-29.9-46.72-59.13c3.43-29.23,29.9-50.14,59.13-46.72
+                                C167.85,100.25,188.76,126.72,185.33,155.95"/>
+                        </g>
+                    </svg>
+                    <p>Viale Del Lavoro, 33 37036<br>San Martino Buon Albergo, Verona - Italy<br><br>info@iotinga.it - iotinga@pec.it</p>
+                    </div>
+                    
+                </div>
+                <div class="nokia-container"><img src="assets/img/foot/nokia.png"></div>
+                <div class="work-with-us"><div><p>Vuoi lavorare con noi?</p><a href="mailto:info@iotinga.it">Contattaci</a></div></div>
             </div>
             <div class="footer">
-                <p>P.IVA</p>
-                <p>Privacy Policy</p>
-                <p>Credits</p>
+                <p>P.IVA IT04656900232</p>
             </div>
         </div>
     </body>

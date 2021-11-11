@@ -2,11 +2,13 @@
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.0);
+    background: black;
 } 
 ::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: var(--iotinga-magenta);
+    animation: scroll-pulse linear 60s infinite alternate;
 } 
 ::-webkit-scrollbar-thumb:hover {
-    background: #eee;
+    animation: none;
+    background: var(--iotinga-white);
 }
