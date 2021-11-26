@@ -460,13 +460,14 @@ img.space-bottom{
 .splitted-section {
     height: 20em;
     display: flex;
+    width: 100vw;
     background: -webkit-linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
     background: -o-linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
     background: -moz-linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
     background: linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
 }
 .buisness-card{
-    width: 33%;
+    width: 34%;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -486,27 +487,27 @@ img.space-bottom{
     color: var(--iotinga-white);
 }
     
-.work-with-us{
-    width: 33%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-}
+
 .nokia-container{
-    width: 33%;
+    width: 33.333%;
     display: inline-flex;
 }
 
 .nokia-container img{
-    height: 20em;
-    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-right: auto;
+    margin-left: auto;
     display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 20em;
 }
 
 
 .work-with-us{
-    width: 33%;
+    width: 33.333%;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -531,15 +532,7 @@ img.space-bottom{
     text-decoration: none;
     color: var(--iotinga-white);
 }
-    
-.work-with-us{
-    width: 33%;
-    display: inline-flex;
-}
-.nokia-container{
-    width: 33%;
-    display: inline-flex;
-}
+   
 
 .footer{
     background-color: var(--iotinga-magenta);

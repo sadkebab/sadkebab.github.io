@@ -132,8 +132,12 @@ img[disable768]{
     }
 
     /* texts */
+    .blue-section-header h1{
+        text-align: center;
+    }
     .blue-section-header p{
         font-size: 1.2em;
+        text-align: center;
     }
     .blue-section-row .text-column, .magenta-section-row .text-column  {
         font-size: 1em;
@@ -217,7 +221,6 @@ img[disable768]{
     }
     .nokia-container img{
         height: auto;
-        width: 100%;
     }
     .work-with-us{
         width: 100%;
