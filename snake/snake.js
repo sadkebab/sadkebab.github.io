@@ -38,20 +38,11 @@ export function update() {
   snakeBody[0].deg=dir;
 }
 
-function degFromInputDirection(inputDirection){
-  if(inputDirection.x == 1){
-    return 90;
-  }
-  else if(inputDirection.x == -1){
-    return 270;
-  }
-  else if(inputDirection.y == 1){
-    return 180;
-  }
-  else if(inputDirection.y == -1){
-    return 0;
-  }
-
+function degFromInputDirection(inputDirection) {
+  if(inputDirection.x == 1) return 90
+  else if(inputDirection.x == -1) return 270
+  else if(inputDirection.y == 1) return 180
+  else if(inputDirection.y == -1) return 0
 }
 
 export function draw(gameBoard) {
