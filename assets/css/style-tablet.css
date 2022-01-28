@@ -13,113 +13,137 @@
         margin-top: -10em;
     }
 }
+@media only screen and (max-width: 1300px) {
+    .work-with-us{
+        grid-column: 18 / span 6;
+    }
+    .nokia-container{
+        grid-column: 8 / span 10;
+    }
+    .buisness-card {
+        grid-column: 2 / span 6;
+    }
+}
 
 @media only screen and (max-width: 1164px) {
-    .satellite-img{
+    .satellite-img {
         top: 14.5em;
         left: 10vw;
         width: 12em;
         z-index: 0;
     }
-    .head-cloud-img{
+
+    .head-cloud-img {
         top: 10em;
         left: 0;
         margin-left: -14em;
         width: 30em;
     }
-    .commodore{
+
+    .commodore {
         top: 26em;
         left: 0;
         margin-left: -3em;
         width: 13em;
     }
-    .starman{
+
+    .starman {
         top: 14em;
         right: 4em;
         width: 10em;
     }
-    .hand{
+
+    .hand {
         top: 26em;
         right: -5em;
         width: 18em;
     }
-    .pc{
+
+    .pc {
         top: 16em;
         left: -4em;
         width: 22em;
     }
-    .cloud-2{
+
+    .cloud-2 {
         width: 30em;
         top: 20em;
         left: -2em;
     }
-    
-    .cloud-3{
+
+    .cloud-3 {
         top: 0;
         right: -19em;
         width: 50em;
     }
-    .head-divider{
-        height:14em;
+
+    .head-divider {
+        height: 14em;
     }
-    .pointer{
+
+    .pointer {
         top: 2em;
         left: -2em;
         width: 14em;
     }
-    .stamp{
+
+    .stamp {
         top: 6em;
         right: 10em;
         width: 14em;
     }
-    .cloud-4{
+
+    .cloud-4 {
         top: 3em;
         right: -10em;
         width: 30em;
     }
 
-    .blue-section-footer{
+    .blue-section-footer {
         height: 20em;
     }
-    .laptop{
+
+    .laptop {
         top: 2em;
         left: -1em;
         width: 14em;
     }
-    .cloud-blue{
+
+    .cloud-blue {
         top: 0em;
         left: -5em;
         width: 30em;
     }
-    .cabinato{
+
+    .cabinato {
         top: 0em;
         right: -4em;
         width: 20em;
     }
-    .napoleon{
+
+    .napoleon {
         margin-top: -7em;
     }
-    
 
-    .text-elements{
+
+    .text-elements {
         font-size: 1em;
     }
 
-    .text-elements b{
-        font-size: 1.4em;
-    }
-    
-    .text-column p{
+        .text-elements b {
+            font-size: 1.4em;
+        }
+
+    .text-column p {
         font-size: 1.2em;
     }
-    .mac img{
+
+    .mac img {
         width: 24em;
     }
-    .vhs img{
+
+    .vhs img {
         width: 20em;
     }
 
-    .work-with-us > div > p{
-        font-size: 1.4em;
-    }
 }
