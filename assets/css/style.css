@@ -240,6 +240,10 @@ h1, hr, p{
     justify-content:space-between;
     flex-direction:column;*/
 }
+img.prize {
+    height: 110px;
+    width: auto;
+}
 @-moz-document url-prefix() {
     .main-description {
         background-position:50% 50%;
@@ -459,7 +463,8 @@ img.space-bottom{
 /* split section */
 .splitted-section {
     height: 20em;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
     width: 100vw;
     background: -webkit-linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
     background: -o-linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
@@ -467,30 +472,32 @@ img.space-bottom{
     background: linear-gradient(90deg, var(--iotinga-blue) 50%, var(--iotinga-green) 50%);
 }
 .buisness-card{
-    width: 34%;
+    grid-column: 4 / span 6;
     text-align: center;
     justify-content: center;
     display: flex;
 }
-.buisness-card > div {
-    padding-top: 4.5em;
-    margin-right: -10em;
+.buisness-card > div{
+    display:block;
+    margin: auto;
 }
-
 .buisness-card > div > svg{
+    display:block;
     width: 5em;
     fill: var(--iotinga-white);
+    margin: 0 auto;
 }
 
-.buisness-card > div > p{
+.buisness-card > div > p {
+    display:block;
     width: 100%;
     color: var(--iotinga-white);
 }
     
 
 .nokia-container{
-    width: 33.333%;
-    display: inline-flex;
+    grid-column: 10 / span 6;
+    display: flex;
 }
 
 .nokia-container img{
@@ -507,16 +514,15 @@ img.space-bottom{
 
 
 .work-with-us{
-    width: 33.333%;
+    grid-column: 16 / span 6;
     text-align: center;
     justify-content: center;
     display: flex;
 }
 .work-with-us > div {
-    padding-top: 8.5em;
-    margin-left: -10em;
+    display: block;
+    margin: auto;
 }
-
 .work-with-us > div > p{
     font-size: 2em;
     color: var(--iotinga-white);
