@@ -35,11 +35,18 @@
     }
 
     #mobile-controls div.wasd{
-      display: flex;
+      
       align-items: center;
       text-align: center;
       background-color: azure;
       padding: 30px;
+      display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+      #mobile-controls div.wasd {
+        display: flex;
+      }
     }
 
     #mobile-controls div p{
