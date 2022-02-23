@@ -30,3 +30,7 @@ document.onscroll = function(){
     // $("#rocket").css('left',(ROCKET_BASE_LEFT+(offset*15.8))+'px');
     // $("#rocket").css('transform','rotate('+(offset*3)+'deg)');
 };
+
+function startGame(){
+    window.location = "/snake";
+}
