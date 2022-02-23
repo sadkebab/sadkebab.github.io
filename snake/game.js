@@ -1,6 +1,6 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, snakeIntersection } from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
-import { wAction, aAction, sAction, dAction } from './input'
+import { wAction, aAction, sAction, dAction } from './input.js'
 
 window.wAction = wAction;
 window.aAction = aAction;
