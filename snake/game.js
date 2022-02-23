@@ -13,7 +13,7 @@ const gameBoard = document.getElementById('game-board')
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm('You lost. Press ok to restart.')) {
+    if (confirm('Hai perso. Press ok per ricominciare oppure annulla per tornare al sito.')) {
       window.location = '/snake/'
     }else{
       window.location = '/'
