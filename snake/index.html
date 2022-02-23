@@ -11,7 +11,6 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-      flex-direction: column;
       align-items: top;
       margin: 0;
       background-color: black;
@@ -27,15 +26,30 @@
     }
 
     #mobile-controls{
+      position: absolute;
+      bottom: 100px;
       width: 300px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
+    #mobile-controls div.wasd{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background-color: azure;
+      padding: 30px;
+    }
+
+    #mobile-controls div p{
+      margin: auto;
+      font-weight: bold;
+    }
+
     .snake {
       /* background-color: hsl(200, 100%, 50%); */
-      border: .25vmin solid black;
+      border: .25vmin solid rgba(0, 0, 0, 0.8);
     }
     
     .snake{
@@ -78,11 +92,11 @@
   <div id="game-board"></div>
   <div id="mobile-controls">
     <div></div>
-    <div><p>W</p></div>
+    <div class="wasd" onclick="wAction()"><p>W</p></div>
     <div></div>
-    <div><p>A</p></div>
-    <div><p>S</p></div>
-    <div><p>S</p></div>
+    <div class="wasd" onclick="aAction()"><p>A</p></div>
+    <div class="wasd" onclick="sAction()"><p>S</p></div>
+    <div class="wasd" onclick="dAction()"><p>D</p></div>
   </div> 
 </body>
 </html>

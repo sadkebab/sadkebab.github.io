@@ -1,5 +1,11 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, snakeIntersection } from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
+import { wAction, aAction, sAction, dAction } from './input'
+
+window.wAction = wAction;
+window.aAction = aAction;
+window.sAction = sAction;
+window.dAction = dAction;
 
 let lastRenderTime = 0
 let gameOver = false
