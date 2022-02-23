@@ -240,7 +240,15 @@ img[disable768]{
     }
 }
 
+@media only screen and (max-width: 496px){
+    img.prize{
+        height: auto;
+        width: 18vw;
+    }
+}
+
 @media only screen and (max-width: 376px){
+
     
     /* .satellite-img{
         top: 10.5em;

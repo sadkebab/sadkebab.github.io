@@ -11,7 +11,6 @@ export function update() {
   addSegments()
   
   const inputDirection = getInputDirection()
-  var dir=degFromInputDirection(inputDirection)
   
   for (let i = snakeBody.length - 2; i >= 0; i--) {
     snakeBody[i + 1] = { ...snakeBody[i] }
@@ -35,18 +34,9 @@ export function update() {
   }else{
     snakeBody[0].y += inputDirection.y
   }
-  snakeBody[0].deg=dir;
-}
-
-function degFromInputDirection(inputDirection) {
-  if(inputDirection.x == 1) return 90
-  else if(inputDirection.x == -1) return 270
-  else if(inputDirection.y == 1) return 180
-  else if(inputDirection.y == -1) return 0
 }
 
 export function draw(gameBoard) {
-  var lastDirection=-1;
   for(var i = 0; i<snakeBody.length; i++){
     var segment = snakeBody[i];
     const snakeElement = document.createElement('div')
@@ -55,41 +45,11 @@ export function draw(gameBoard) {
     snakeElement.classList.add('snake')
     if(i==0){
       snakeElement.classList.add('head')
-      if(foodNext(segment)){
-        snakeElement.classList.add('open-mouth')
-      }
     } else if(i==snakeBody.length-1){
       snakeElement.classList.add('tail')
     }
 
-    if(lastDirection==-1){
-      snakeElement.classList.add('deg'+segment.deg)
-      lastDirection=segment.deg
-    }
-    else if(lastDirection==segment.deg){
-      snakeElement.classList.add('deg'+segment.deg)
-    }
-    else {
-      snakeElement.classList.add('angle'+lastDirection+segment.deg)
-      lastDirection=segment.deg
-    }
-    
     gameBoard.appendChild(snakeElement)
-  }
-}
-
-function foodNext(snakeHead){
-  switch (snakeHead.deg) {
-    case 0:
-      return (snakeHead.x == food.x && snakeHead.y-1 == food.y)
-    case 90:
-      return (snakeHead.x+1 == food.x && snakeHead.y == food.y)
-    case 180:
-      return (snakeHead.x == food.x && snakeHead.y+1 == food.y)
-    case 270:
-      return (snakeHead.x-1 == food.x && snakeHead.y == food.y)
-    default:
-      return false
   }
 }
 
