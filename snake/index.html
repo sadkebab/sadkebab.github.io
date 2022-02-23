@@ -27,7 +27,7 @@
 
     #mobile-controls{
       position: absolute;
-      bottom: 100px;
+      bottom: 30px;
       width: 300px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -42,7 +42,7 @@
       padding: 30px;
       display: none;
     }
-    
+
     @media screen and (max-width: 600px) {
       #mobile-controls div.wasd {
         display: flex;
@@ -56,7 +56,7 @@
 
     .snake {
       /* background-color: hsl(200, 100%, 50%); */
-      border: .25vmin solid rgba(0, 0, 0, 0.8);
+      border: .25vmin solid rgb(100, 100, 100);
     }
     
     .snake{
@@ -89,7 +89,8 @@
     }
 
     .food {
-      background-color: hsl(50, 100%, 50%);
+      /* background-color: hsl(50, 100%, 50%); */
+      background-image: url("svg/food.svg");
       border: .25vmin solid black;
     }
   </style>
