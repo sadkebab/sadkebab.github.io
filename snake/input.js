@@ -26,13 +26,13 @@ export function wAction(){
   if (lastInputDirection.y == 0) inputDirection = { x: 0, y: -1 }
 }
 export function aAction(){
-  if (lastInputDirection.x !== 0) inputDirection = { x: -1, y: 0 }
+  if (lastInputDirection.x == 0) inputDirection = { x: -1, y: 0 }
 }
 export function sAction(){
   if (lastInputDirection.y == 0) inputDirection = { x: 0, y: 1 }
 }
 export function dAction(){
-  if (lastInputDirection.x !== 0) inputDirection = { x: 1, y: 0 }
+  if (lastInputDirection.x == 0) inputDirection = { x: 1, y: 0 }
 }
 
 
