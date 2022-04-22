@@ -1,92 +1,61 @@
-import { getInputDirection } from "./input.js"
-import { GRID_SIZE } from './grid.js'
+const base = require('./base')
+Object.getOwnPropertyNames(base).map(p => global[p] = base[p])
 
-let food;
-export let SNAKE_SPEED = 10
+// Constants
+const NORTH = { x: 0, y:-1 }
+const SOUTH = { x: 0, y: 1 }
+const EAST  = { x: 1, y: 0 }
+const WEST  = { x:-1, y: 0 }
 
-const snakeBody = [{ x: 11, y: 11, deg:0}]
-let newSegments = 0
+// Point operations
+const pointEq = p1 => p2 => p1.x == p2.x && p1.y == p2.y
 
-export function update() {
-  addSegments()
-  
-  const inputDirection = getInputDirection()
-  
-  for (let i = snakeBody.length - 2; i >= 0; i--) {
-    snakeBody[i + 1] = { ...snakeBody[i] }
+// Booleans
+const willEat   = state => pointEq(nextHead(state))(state.apple)
+const willCrash = state => state.snake.find(pointEq(nextHead(state)))
+const validMove = move => state =>
+  state.moves[0].x + move.x != 0 || state.moves[0].y + move.y != 0
+
+// Next values based on state
+const nextMoves = state => state.moves.length > 1 ? dropFirst(state.moves) : state.moves
+const nextApple = state => willEat(state) ? rndPos(state) : state.apple
+const nextHead  = state => state.snake.length == 0
+  ? { x: 2, y: 2 }
+  : {
+    x: mod(state.cols)(state.snake[0].x + state.moves[0].x),
+    y: mod(state.rows)(state.snake[0].y + state.moves[0].y)
   }
+const nextSnake = state => willCrash(state)
+  ? []
+  : (willEat(state)
+    ? [nextHead(state)].concat(state.snake)
+    : [nextHead(state)].concat(dropLast(state.snake)))
 
-  
-  if(snakeBody[0].x == GRID_SIZE && inputDirection.x == 1){
-    snakeBody[0].x=1;
-  }
-  else if (snakeBody[0].x == 1 && inputDirection.x == -1){
-    snakeBody[0].x=GRID_SIZE;
-  }else{
-    snakeBody[0].x += inputDirection.x
-  }
-  
-  if(snakeBody[0].y == GRID_SIZE && inputDirection.y == 1){
-    snakeBody[0].y=1;
-  }
-  else if (snakeBody[0].y == 1 && inputDirection.y == -1){
-    snakeBody[0].y=GRID_SIZE;
-  }else{
-    snakeBody[0].y += inputDirection.y
-  }
-}
+// Randomness
+const rndPos = table => ({
+  x: rnd(0)(table.cols - 1),
+  y: rnd(0)(table.rows - 1)
+})
 
-export function draw(gameBoard) {
-  for(var i = 0; i<snakeBody.length; i++){
-    var segment = snakeBody[i];
-    const snakeElement = document.createElement('div')
-    snakeElement.style.gridRowStart = segment.y
-    snakeElement.style.gridColumnStart = segment.x
-    snakeElement.classList.add('snake')
-    if(i==0){
-      snakeElement.classList.add('head')
-    } else if(i==snakeBody.length-1){
-      snakeElement.classList.add('tail')
-    }
+// Initial state
+const initialState = () => ({
+  cols:  20,
+  rows:  14,
+  moves: [EAST],
+  snake: [],
+  apple: { x: 16, y: 2 },
+})
 
-    gameBoard.appendChild(snakeElement)
-  }
-}
+const next = spec({
+  rows:  prop('rows'),
+  cols:  prop('cols'),
+  moves: nextMoves,
+  snake: nextSnake,
+  apple: nextApple
+})
 
-export function expandSnake(amount) {
-  newSegments += amount
-}
+const enqueue = (state, move) => validMove(move)(state)
+  ? merge(state)({ moves: state.moves.concat([move]) })
+  : state
 
-export function onSnake(position, { ignoreHead = false } = {}) {
-  return snakeBody.some((segment, index) => {
-    if (ignoreHead && index === 0) return false
-    return equalPositions(segment, position)
-  })
-}
-
-export function getSnakeHead() {
-  return snakeBody[0]
-}
-
-export function snakeIntersection() {
-  return onSnake(snakeBody[0], { ignoreHead: true })
-}
-
-export function setFood(newFood){
-  food=newFood
-}
-
-function equalPositions(pos1, pos2) {
-  return pos1.x === pos2.x && pos1.y === pos2.y
-}
-
-function addSegments() {
-  for (let i = 0; i < newSegments; i++) {
-    snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
-    if(snakeBody.length%8==0){
-      SNAKE_SPEED++
-    }
-  }
-  
-  newSegments = 0
-}
+module.exports = { EAST, NORTH, SOUTH, WEST, initialState, enqueue, next, }
